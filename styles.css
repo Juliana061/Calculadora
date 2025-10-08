@@ -1,0 +1,110 @@
+/* ===============================
+   FONDO GENERAL DE LA PÁGINA
+   =============================== */
+body {
+  background-color: #000; /* Fondo negro estilo calculadora iPhone */
+  color: #fff; /* Texto blanco por defecto */
+  font-family: "SF Pro Display", "Segoe UI", Roboto, Arial, sans-serif; /* Tipografía moderna */
+  display: flex; /* Centra el contenido principal */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  margin: 0; /* Elimina los márgenes por defecto */
+}
+
+/* ===============================
+     CONTENEDOR PRINCIPAL DE LA APP
+     =============================== */
+.App {
+  text-align: center; /* Centra el contenido dentro del contenedor */
+}
+
+/* ===============================
+     CUERPO DE LA CALCULADORA
+     =============================== */
+.calculadora {
+  background-color: #000; /* Fondo negro (coincide con el body) */
+  border-radius: 40px; /* Bordes redondeados estilo iPhone */
+  padding: 25px 20px; /* Espaciado interno */
+  width: 320px; /* Ancho fijo de la calculadora */
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8); /* Sombra para dar efecto de profundidad */
+}
+
+/* ===============================
+     PANTALLA DE LA CALCULADORA
+     =============================== */
+.pantalla {
+  text-align: right; /* Números alineados a la derecha */
+  font-size: 3rem; /* Tamaño grande de texto */
+  color: white; /* Texto blanco */
+  padding: 20px 10px; /* Espaciado interior */
+  margin-bottom: 20px; /* Separación inferior respecto a los botones */
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  font-weight: 300; /* Fuente delgada */
+  min-height: 60px; /* Altura mínima de la pantalla */
+}
+
+/* ===============================
+     BOTONERA (DISPOSICIÓN DE BOTONES)
+     =============================== */
+.botones {
+  display: grid; /* Usa una cuadrícula */
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 12px; /* Espaciado entre los botones */
+}
+
+/* ===============================
+     ESTILO GENERAL DE LOS BOTONES
+     =============================== */
+button {
+  font-size: 1.6rem; /* Tamaño de letra mediano-grande */
+  border: none; /* Sin borde */
+  border-radius: 50%; /* Forma circular */
+  height: 70px; /* Alto del botón */
+  width: 70px; /* Ancho del botón */
+  cursor: pointer; /* Cursor de mano al pasar */
+  transition: all 0.2s ease-in-out; /* Suaviza las animaciones */
+  background-color: #333; /* Fondo gris oscuro */
+  color: white; /* Texto blanco */
+}
+
+/* ===============================
+     EFECTO HOVER EN BOTONES
+     =============================== */
+button:hover {
+  filter: brightness(1.2); /* Aumenta el brillo al pasar el mouse */
+  transform: scale(1.05); /* Hace un leve zoom */
+}
+
+/* ===============================
+     BOTONES DE OPERACIÓN
+     (+, -, ×, ÷, =)
+     =============================== */
+button.operacion {
+  background-color: #ff9500; /* Naranja brillante (típico de iPhone) */
+  color: white; /* Texto blanco */
+  font-weight: bold; /* Texto más grueso */
+}
+
+/* ===============================
+     BOTONES GRIS CLARO SUPERIORES
+     (C, +/-, %)
+     =============================== */
+button.gris {
+  background-color: #a5a5a5; /* Fondo gris claro */
+  color: #000; /* Texto negro */
+  font-weight: 500; /* Texto seminegrita */
+}
+
+/* ===============================
+     BOTÓN DEL CERO (0)
+     ANCHO DOBLE
+     =============================== */
+button.cero {
+  grid-column: span 2; /* Ocupa dos columnas en la cuadrícula */
+  width: 150px; /* Doble ancho del botón normal */
+  border-radius: 35px; /* Borde más ovalado */
+  text-align: left; /* Alinea el número a la izquierda */
+  padding-left: 25px; /* Espacio antes del número 0 */
+}
